@@ -23,26 +23,33 @@ public class Time
 {
 	public static void main(String[] args) 
 	{
-		try {
-            String time = JOptionPane.showInputDialog(null,
-                "Enter a time in the format hh:mm:ss.SSS", "Enter Time",
-                JOptionPane.QUESTION_MESSAGE);
-
-            int totalMilliseconds = getTotalMilliseconds(time);
-            JOptionPane.showMessageDialog(null, totalMilliseconds, "Total Milliseconds",
-                JOptionPane.INFORMATION_MESSAGE);
-        } catch (StringIndexOutOfBoundsException e) {
-            JOptionPane.showMessageDialog(null,
-                    "You entered the time in the wrong format.\n" +
-                    "Please enter the time in the form hh:mm:ss.SSS",
-                    "Invalid Time", JOptionPane.ERROR_MESSAGE);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null,
-                    "You entered an invalid time.\nPlease enter numbers only.",
-                    "Invalid Time", JOptionPane.ERROR_MESSAGE);
-        } catch (Exception e) {
-            System.out.println("An unexpected Exception occurred");
-        }
+		
+		int totalSeconds = getSeconds("10:10:10");
+		System.out.println("**GH Total Seconds = " + totalSeconds);
+		
+		
+		
+		
+//		try {
+//            String time = JOptionPane.showInputDialog(null,
+//                "Enter a time in the format hh:mm:ss.SSS", "Enter Time",
+//                JOptionPane.QUESTION_MESSAGE);
+//
+//            int totalMilliseconds = getTotalMilliseconds(time);
+//            JOptionPane.showMessageDialog(null, totalMilliseconds, "Total Milliseconds",
+//                JOptionPane.INFORMATION_MESSAGE);
+//        } catch (StringIndexOutOfBoundsException e) {
+//            JOptionPane.showMessageDialog(null,
+//                    "You entered the time in the wrong format.\n" +
+//                    "Please enter the time in the form hh:mm:ss.SSS",
+//                    "Invalid Time", JOptionPane.ERROR_MESSAGE);
+//        } catch (NumberFormatException e) {
+//            JOptionPane.showMessageDialog(null,
+//                    "You entered an invalid time.\nPlease enter numbers only.",
+//                    "Invalid Time", JOptionPane.ERROR_MESSAGE);
+//        } catch (Exception e) {
+//            System.out.println("An unexpected Exception occurred");
+//        }
     }
 
     public static int getTotalMilliseconds(String time) throws NumberFormatException, StringIndexOutOfBoundsException {
